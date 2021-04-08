@@ -9,27 +9,29 @@ document.getElementById('form')
         const serviceID = 'default_service';
         const templateID = 'template_vjsmbci';
 
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                btn.value = 'Send Email';
-                 Swal.fire({
+   Swal.fire({
              title: 'Do you want to save the changes?',
                         showDenyButton: true,
                         showCancelButton: true,
-                        confirmButtonText: `Save`,
-                        denyButtonText: `Don't save`,
+                        confirmButtonText: `Send`,
+                        denyButtonText: `Don't send`,
                     }).then((result) => {
                         /* Read more about isConfirmed, isDenied below */
                         if (result.isConfirmed) {
-                            Swal.fire('Saved!', '', 'success')
+                            Swal.fire('Sent!', '', 'success')
+                                 emailjs.sendForm(serviceID, templateID, this)
+                                     .then(() => {
+                                         btn.value = 'Send Email';
+
+                                     }, (err) => {
+                                         btn.value = 'Send Email';
+                                         Swal.fire('Message not Sent', '', JSON.stringify(err));
+                                     });
                         } else if (result.isDenied) {
-                            Swal.fire('Changes are not saved', '', 'info')
+                            Swal.fire('Message not Sent', '', 'info')
                         }
                     })
-            }, (err) => {
-                btn.value = 'Send Email';
-                alert(JSON.stringify(err));
-            });
+   
     });
 
                    

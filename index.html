@@ -250,22 +250,43 @@
 
     <form id="form">
         <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <label for="inputName">Name</label>
+            <input type="text" name="form_name" class="form-control" id="inputName" placeholder="Enter Name">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <label for="inputEmail">Email address</label>
+            <input type="email" name="reply_to" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+                placeholder="Enter Email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
         </div>
         <div class="form-group">
         <!-- <form method="post" id="TinyMCE"> -->
          <h6>Message</h1>
-            <textarea id="mytextarea" name="mytextarea"></textarea>
+            <textarea name="message" id="mytextarea" name="mytextarea"></textarea>
         <!-- </form> -->
             </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1">@</span>
+                </div>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+                    aria-describedby="basic-addon1">
+            </div>
 
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Recipient's username"
+                    aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                    <span class="input-group-text" id="basic-addon2">@example.com</span>
+                </div>
+            </div>
+
+            <label for="basic-url">Your vanity URL</label>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+                </div>
+<input class="btn btn-primary" type="submit" value="Submit">
         <button type="submit" id="button" class="btn btn-primary">Submit</button>
     </form>
 
