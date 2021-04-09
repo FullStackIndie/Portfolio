@@ -15,5 +15,3 @@ document.getElementById('form')
                 Swal.fire('Message not Sent', '', JSON.stringify(err));
             });
     });
-
-                   
