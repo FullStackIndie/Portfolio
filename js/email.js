@@ -10,7 +10,7 @@ document.getElementById('form')
    
         emailjs.sendForm(serviceID, templateID, this)
             .then(() => {
-
+                Swal.fire('Message Sent');
             }, (err) => {
                 Swal.fire('Message not Sent', '', JSON.stringify(err));
             });
