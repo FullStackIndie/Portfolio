@@ -66,7 +66,7 @@ body {
   line-height: 1.5;
   color: #212529;
   text-align: left;
-  background-color: #fff;
+  background-color: #DB9151;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -2438,13 +2438,13 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  background-color: #f2b965;
+  border-color: #f2b965;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #f24516;
-  border-color: #ee3e0d;
+  background-color: rgb(255, 145, 0);
+  border-color: rgb(255, 145, 0);
 }
 .btn-primary:focus, .btn-primary.focus {
   color: #fff;
@@ -4319,10 +4319,12 @@ input[type=button].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(250, 181, 139, 0.8) 100%);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
+  margin-top: 3em;
+  margin-left:1em;
 }
 .card > hr {
   margin-right: 0;
@@ -6073,7 +6075,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #f4623a !important;
+  background-color: #f2b965 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9984,9 +9986,9 @@ html {
 }
 
 hr.divider {
-  max-width: 3.25rem;
+  max-width: 30.25rem;
   border-width: 0.2rem;
-  border-color: #f4623a;
+  border-color: #f3af48;
 }
 
 hr.light {
@@ -10028,10 +10030,10 @@ hr.light {
   padding: 0.75rem 0;
 }
 #mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
+  color: #f2b965;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: #f2b965 !important;
 }
 @media (min-width: 992px) {
   #mainNav {
@@ -10042,20 +10044,20 @@ hr.light {
     color: rgba(245, 147, 35, 0.7);
   }
   #mainNav .navbar-brand:hover {
-    color: #fff;
+    color: rgb(255, 145, 0);
   }
   #mainNav .navbar-nav .nav-item .nav-link {
     color: rgba(241, 160, 38, 0.7);
     padding: 0 1rem;
   }
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #fff;
+    color: rgb(255, 145, 0);
   }
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
     padding-right: 0;
   }
   #mainNav.navbar-scrolled {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0.5rem 1rem rgba(202, 157, 88, 0.15);
     background-color: #fff;
   }
   #mainNav.navbar-scrolled .navbar-brand {
@@ -10076,8 +10078,8 @@ header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 4.5rem);
 /* linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), */
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(228, 172, 139, 0.8) 100%), 
-  url("../img/cookie-the-pom-unsplash.com.jpg");
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(219, 190, 172, 0.8) 100%), 
+  url("/img/cookie-the-pom-unsplash.com.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;

@@ -1,0 +1,5 @@
+main color
+#f2b965
+
+link hover
+rgb(255, 145, 0)
