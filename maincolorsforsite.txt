@@ -3,3 +3,5 @@ main color
 
 link hover
 rgb(255, 145, 0)
+
+#ff9100
