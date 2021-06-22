@@ -24,7 +24,7 @@ $(function () {
                         <div class="card-body">
                             <h5 class="card-title">${post.title}</h5>
                             <p class="card-text">${post.abstract}</p>
-                            <a target="_blank" class="btn btn-light">Check it out</a>
+                            <a target="_blank" href="${blogUrl}${post.slug}" class="btn btn-light">Check it out</a>
                         </div>
                         <div class="card-footer text-muted">
                             Created: ${new Date(post.created).toLocaleDateString("en-US", options)}
