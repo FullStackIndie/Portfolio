@@ -33,7 +33,7 @@ document.getElementById("challengeTitle").innerText = "Sum Of All Fears";
 document.getElementById("challengePicture").setAttribute("src", "/img/roman-synkevych-SumOfAllFears-unsplash.jpg");
 document.getElementById("challengeSummary").innerText =
     "JavaScript Challenge that looks for any sum of two numbers inside of an array that equals the number were looking for.";
-document.getElementById("challengeLink").setAttribute("href", "https://jm-tacocat.netlify.app");
+document.getElementById("challengeLink").setAttribute("href", "https://jm-sum-of-all-fears.netlify.app/");
 }
 
 function showMortgageCalculator(){
