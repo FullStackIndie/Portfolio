@@ -2,7 +2,7 @@ version: 0.0
 os: windows
 files:
   - source: /
-    destination: C:/inetpub/wwwroot/publish/Portfolio
+    destination: C:/inetpub/wwwroot/publish
 hooks:
   BeforeInstall:
   - location: /before-install.ps1
