@@ -1,9 +1,7 @@
-name: Build, Publish to S3, Deploy to AWS EC2
+name: Build from Github, Deploy to AWS EC2
 
 on:
   push:
-    branches: [ main ]
-  pull_request:
     branches: [ main ]
 
 jobs:
@@ -23,7 +21,6 @@ jobs:
             --application-name Portfolio
             --deployment-group-name Portfolio
             --deployment-config-name CodeDeployDefault.OneAtATime
-            --description "My GitHub deployment demo"
             --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
   
   
