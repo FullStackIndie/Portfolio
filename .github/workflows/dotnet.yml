@@ -1,0 +1,29 @@
+name: Build, Publish to S3, Deploy to AWS EC2
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+ continuous-deployment:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: us-west-1
+
+    if: github.ref == 'refs/heads/main'
+    steps:
+  # Step 1
+      - name: Create CodeDeploy Deployment
+        run: 
+         aws deploy create-deployment
+            --application-name Portfolio
+            --deployment-group-name Portfolio
+            --deployment-config-name CodeDeployDefault.OneAtATime
+            --description "My GitHub deployment demo"
+            --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+  
+  

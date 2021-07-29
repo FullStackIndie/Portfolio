@@ -2,7 +2,7 @@
 
 $currentRetry = 0;
 $success = $false;
-$appPool = "DefaultAppPool"
+$appPool = "Portfolio"
 
 Write-Host "Stopping $appPool"
 Stop-WebAppPool -Name $appPool
