@@ -1,9 +1,9 @@
 $(function () {
-    fetch('//johnrockwellblog.herokuapp.com/GetTopXPosts/3')
+    fetch('//blog.coding4christ.net/GetTopXPosts/3')
         .then(response => response.json())
         .then(function (data) {
 
-            let blogUrl = "https://johnrockwellblog.herokuapp.com/BlogPosts/Details/";
+            let blogUrl = "https://blog.coding4christ.net/BlogPosts/Details/";
 
             let options = {
                 weekday: 'long',
