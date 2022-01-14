@@ -16,7 +16,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         rm: true
         port: ${{ secrets.REMOTE_PORT }}
-        source: "index.html"
+        source: "/home/runner/work/Portfolio/Portfolio"
         target: "${{ secrets.REMOTE_DIR }}"
 
 
