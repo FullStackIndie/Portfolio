@@ -1,4 +1,4 @@
-name: Build from Github, Deploy to AWS EC2
+name: Build from Github, Deploy to Linux
 
 on:
   push:
@@ -16,6 +16,7 @@ jobs:
         username:  ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.REMOTE_PORT }}
+        rm: true
         source: "/home/runner/work/Portfolio/Portfolio/"
         target: "${{ secrets.REMOTE_DIR }}"
 
