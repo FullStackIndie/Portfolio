@@ -17,7 +17,7 @@ jobs:
         port: ${{ secrets.REMOTE_PORT }}
         local_path: "./*"
         remote_path: "${{ secrets.REMOTE_DIR }}"
-
+        args: '-o ConnectTimeout=5'
 
 
 
