@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
- continuous-deployment:
+continuous-deployment:
     runs-on: ubuntu-latest
 
     - name: Copying files to server
