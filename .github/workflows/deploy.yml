@@ -3,9 +3,9 @@ name: Build from Github, Deploy to AWS EC2
 on:
   push:
     branches: [ main ]
-
+    
 jobs:
-continuous-deployment:
+ continuous-integration:
     runs-on: ubuntu-latest
 
     - name: Copying files to server
