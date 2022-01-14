@@ -10,15 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Copying files to server
-      uses: wlixcc/SFTP-Deploy-Action@v1.2.1
+      uses: appleboy/scp-action@v0.1.2
       with:
-        server: ${{ secrets.REMOTE_HOST }}
+        host: ${{ secrets.REMOTE_HOST }}
         username:  ${{ secrets.USERNAME }}
-        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
+        password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.REMOTE_PORT }}
-        local_path: "./*"
-        remote_path: "${{ secrets.REMOTE_DIR }}"
-        args: '-o ConnectTimeout=5'
+        source: "/home/runner/work/Portfolio/Portfolio/"
+        target: "${{ secrets.REMOTE_DIR }}"
 
 
 
