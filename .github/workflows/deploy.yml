@@ -3,7 +3,7 @@ name: Build from Github, Deploy to AWS EC2
 on:
   push:
     branches: [ main ]
-    
+
 jobs:
  continuous-integration:
     runs-on: ubuntu-latest
@@ -16,7 +16,7 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         rm: true
         port: ${{ secrets.REMOTE_PORT }}
-        source: "Portfolio/"
+        source: "index.html"
         target: "${{ secrets.REMOTE_DIR }}"
 
 
