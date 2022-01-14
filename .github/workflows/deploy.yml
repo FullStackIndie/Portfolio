@@ -8,6 +8,7 @@ jobs:
  continuous-integration:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v2
     - name: Copying files to server
       uses: wlixcc/SFTP-Deploy-Action@v1.2.1
       with:
