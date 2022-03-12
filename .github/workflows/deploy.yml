@@ -18,9 +18,20 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           rm: true
-          source: "/home/runner/work/Portfolio/Portfolio/github/workspace"
+          source: "/home/runner/work/Portfolio/Portfolio"
           target: "${{ secrets.REMOTE_DIR }}"
-
+          
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
+          port: ${{ secrets.REMOTE_PORT }}
+          script: |
+            cp /var/www/portfolio/github/workspace/ /var/www/portfolio
+            rm -r /var/www/portfolio/github
           
 
     # env:
