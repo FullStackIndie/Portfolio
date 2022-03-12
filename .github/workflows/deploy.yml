@@ -15,6 +15,7 @@ jobs:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
+          passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           rm: true
           source: "/home/runner/work/Portfolio/Portfolio/"
