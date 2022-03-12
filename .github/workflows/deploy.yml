@@ -21,7 +21,7 @@ jobs:
           port: ${{ secrets.REMOTE_PORT }}
           envs: dir
           script: |
-            cp /home/runner/work/Portfolio/Portfolio/ /var/www/portfolio
+            cp /home/runner/work/Portfolio/Portfolio /var/www/portfolio
           
 
     # env:
