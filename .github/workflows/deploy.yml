@@ -10,18 +10,17 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Copying files to server
-        uses: appleboy/ssh-action@v0.1.4
-        env: 
-          dir: ${{ secrets.REMOTE_DIR}}
+        uses: appleboy/scp-action@v0.1.2
         with:
           host: ${{ secrets.REMOTE_HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
-          envs: dir
-          script: |
-            cp /home/runner/work/Portfolio/Portfolio /var/www/portfolio
+          rm: true
+          source: "/home/runner/work/Portfolio/Portfolio/"
+          target: "${{ secrets.REMOTE_DIR }}"
+
           
 
     # env:
