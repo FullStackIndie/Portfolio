@@ -18,7 +18,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           rm: true
-          source: "/home/runner/work/Portfolio/Portfolio/"
+          source: "/home/runner/work/Portfolio/Portfolio/github/workspace"
           target: "${{ secrets.REMOTE_DIR }}"
 
           
