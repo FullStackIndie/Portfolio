@@ -30,7 +30,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           port: ${{ secrets.REMOTE_PORT }}
           script: |
-            cp -r /var/www/portfolio/github/workspace/ /var/www/portfolio
+            cp -r /var/www/portfolio//github/workspace/* /var/www/portfolio
             rm -r /var/www/portfolio/github
           
 
