@@ -1,4 +1,4 @@
-name: Build, Create Docker Image, Push to DockerHub
+name: Deploy to Linux Server
 
 on:
   push:
@@ -16,5 +16,8 @@ jobs:
       folder_path: /var/www/html/portfolio
       owner_name: FullStackIndie
       repo_name: Portfolio
-    secrets: inherit
- 
+    secrets: 
+      SERVER_SSH_HOST: ${{ secrets.SERVER_SSH_HOST }}
+      SERVER_SSH_USERNAME: ${{ secrets.SERVER_SSH_USERNAME }}
+      SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
+      SERVER_SSH_PORT: ${{ secrets.SERVER_SSH_PORT }}
