@@ -1,9 +1,9 @@
 $(function () {
-    fetch('//blog.coding4christ.net/GetTopXPosts/3')
+    fetch('//blog.fullstackindie.net/GetTopXPosts/3')
         .then(response => response.json())
         .then(function (data) {
 
-            let blogUrl = "https://blog.coding4christ.net/BlogPosts/Details/";
+            let blogUrl = "https://blog.fullstackindie.net/BlogPosts/Details/";
 
             let options = {
                 weekday: 'long',
@@ -12,7 +12,7 @@ $(function () {
                 day: 'numeric',
             }
 
-
+            console.log(data[0]);
             let blogLink = `${blogUrl}${data[0].slug}`;
             var blogPosts = document.getElementById('blog-posts');
             data.forEach(function (post) {
@@ -37,6 +37,9 @@ $(function () {
 
 
 
-        })
+        }).catch((err) => 
+        {
+            console.log(err);
+        });
 
 });

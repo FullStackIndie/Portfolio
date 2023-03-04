@@ -1,37 +1,20 @@
-name: Build from Github, Deploy to Linux
+name: Build, Create Docker Image, Push to DockerHub
 
 on:
   push:
     branches: [main]
 
+  pull_request:
+    branches: [main]
+
+  workflow_dispatch:
+
 jobs:
-  continuous-integration:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Copying files to server
-        uses: appleboy/scp-action@v0.1.2
-        with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.REMOTE_PORT }}
-          rm: true
-          source: "/home/runner/work/Portfolio/Portfolio/"
-          target: "${{ secrets.REMOTE_DIR }}"
-
-    # env:
-    #   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-    #   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    #   AWS_DEFAULT_REGION: us-west-1
-
-    #   if: github.ref == 'refs/heads/main'
-    #   steps:
-    # # Step 1
-    #     - name: Create CodeDeploy Deployment
-    #       run:
-    #        aws deploy create-deployment
-    #           --application-name Portfolio
-    #           --deployment-group-name Portfolio
-    #           --deployment-config-name CodeDeployDefault.OneAtATime
-    #           --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
+  build-test-publish:
+    uses: FullStackIndie/Reusable-Workflows/.github/workflows/deploy_static_website.yml@main
+    with:
+      folder_path: /var/www/html/portfolio
+      owner_name: FullStackIndie
+      repo_name: Portfolio
+    secrets: inherit
+ 
