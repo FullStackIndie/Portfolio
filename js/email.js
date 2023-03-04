@@ -4,8 +4,8 @@ document.getElementById('form')
     .addEventListener('submit', function (event) {
         event.preventDefault();
 
-        const serviceID = 'default_service';
-        const templateID = 'template_vjsmbci';
+        const serviceID = 'service_rl2adad';
+        const templateID = 'template_yjm3hz9';
 
    
         emailjs.sendForm(serviceID, templateID, this)
