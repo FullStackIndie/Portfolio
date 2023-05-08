@@ -1,8 +1,11 @@
 {
-    "liveServer.settings.port": 5501,
-    "workbench.colorCustomizations": {
-        "activityBar.background": "#531A1C",
-        "titleBar.activeBackground": "#742527",
-        "titleBar.activeForeground": "#FEFBFB"
-    }
+  "liveServer.settings.port": 5501,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#531A1C",
+    "titleBar.activeBackground": "#742527",
+    "titleBar.activeForeground": "#FEFBFB"
+  },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///c%3A/Users/johnm/My%20Drive/Web%20Dev/Websites/CoderFoundry/Portfolio/.github/workflows/deploy.yml"
+  }
 }

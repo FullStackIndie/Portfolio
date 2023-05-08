@@ -16,7 +16,7 @@ jobs:
       folder_path: /var/www/html/portfolio
       owner_name: FullStackIndie
       repo_name: Portfolio
-    secrets: 
+    secrets:
       SERVER_SSH_HOST: ${{ secrets.SERVER_SSH_HOST }}
       SERVER_SSH_USERNAME: ${{ secrets.SERVER_SSH_USERNAME }}
       SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
@@ -25,4 +25,4 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
       CLOUDFRONT_DITRIBUTION_ID: ${{ secrets.CLOUDFRONT_DITRIBUTION_ID }}
-      AWS_REGION: ${{ secrets.AWS_REGION }}  
+      AWS_REGION: ${{ secrets.AWS_REGION }}
