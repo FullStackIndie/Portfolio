@@ -1,5 +1,6 @@
 
 function showTacoCat() {
+    javascript: void(0);
     $(function () {
         $('#challenges').modal();
     })
