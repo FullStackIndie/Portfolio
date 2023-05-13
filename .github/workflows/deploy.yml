@@ -14,11 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create a Sitemap
-        uses: FullStackIndie/sitemap-generator@v1.1.0
+        uses: FullStackIndie/sitemap-generator@v1.2.1
         with:
           url: https://portfolio.fullstackindie.net
-          sitemap_path: .
-          log_path: .
+          cache-key: sitemap
 
   build-test-publish:
     needs: create-site-map
