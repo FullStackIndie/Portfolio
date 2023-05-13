@@ -31,7 +31,7 @@ jobs:
 
   create-site-map:
     needs: build-test-publish
-    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_upload_s3_cloudfront_invalidation.yml@v1.0.7
+    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_upload_s3_cloudfront_invalidation.yml@v1.0.8
     with:
       url: https://portfolio.fullstackindie.net
       cache: false
