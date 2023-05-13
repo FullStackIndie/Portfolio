@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Create a Sitemap
-        uses: FullStackIndie/sitemap-generator@v1.0.5
+        uses: FullStackIndie/sitemap-generator@v1.0.6
         with:
           url: https://portfolio.fullstackindie.com
           sitemap_path: .
