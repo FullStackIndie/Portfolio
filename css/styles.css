@@ -4321,7 +4321,7 @@ input[type=button].btn-block {
   word-wrap: break-word;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8) 0%, rgba(250, 181, 139, 0.8) 100%);
   background-clip: border-box;
-  border: 1px solid rgba(0, 0, 0, 0.125);
+  border: 1px solid rgba(230 215 175);
   border-radius: 0.25rem;
   margin-top: 3em;
   margin-left:1em;

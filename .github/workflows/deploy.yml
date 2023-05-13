@@ -10,15 +10,25 @@ on:
   workflow_dispatch:
 
 jobs:
+  create-site-map:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create a Sitemap
+        uses: FullStackIndie/sitemap-generator@v1.0.1
+        with:
+          url: https://fullstackindie.com
+          sitemap_path: .
+          log_path: .
+
   build-test-publish:
-    uses: FullStackIndie/Reusable-Workflows/.github/workflows/Update deploy_static_website_s3_&_cloudfront_invalidation.yml@main
+    needs: create-site-map
+    uses: FullStackIndie/Reusable-Workflows/.github/workflows/deploy_static_website_s3_&_cloudfront_invalidation.yml@main
     with:
       folder_path: /var/www/html/portfolio
-      owner_name: FullStackIndie
       repo_name: Portfolio
       source_folder: ./
       dest_folder: Portfolio
-      invalidation_path: /Portfolio/*
+      invalidation_paths: /Portfolio/*
     secrets:
       SERVER_SSH_HOST: ${{ secrets.SERVER_SSH_HOST }}
       SERVER_SSH_USERNAME: ${{ secrets.SERVER_SSH_USERNAME }}
@@ -28,4 +38,4 @@ jobs:
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION }}
       AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-      CLOUDFRONT_DITRIBUTION_ID: ${{ secrets.CLOUDFRONT_DITRIBUTION_ID }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
