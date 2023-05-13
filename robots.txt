@@ -1,0 +1,3 @@
+# https://portfolio.fullstackindie.net/robots.txt
+
+Sitemap: https://dsm56ob6rdulz.cloudfront.net/Portfolio/sitemap.xml

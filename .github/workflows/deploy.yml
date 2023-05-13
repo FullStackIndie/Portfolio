@@ -10,17 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create-site-map:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Create a Sitemap
-        uses: FullStackIndie/sitemap-generator@v1.2.2
-        with:
-          url: https://portfolio.fullstackindie.net
-          cache-key: sitemap
-
   build-test-publish:
-    needs: create-site-map
     uses: FullStackIndie/Reusable-Workflows/.github/workflows/deploy_static_website_s3_&_cloudfront_invalidation.yml@main
     with:
       folder_path: /var/www/html/portfolio
@@ -33,6 +23,21 @@ jobs:
       SERVER_SSH_USERNAME: ${{ secrets.SERVER_SSH_USERNAME }}
       SERVER_SSH_KEY: ${{ secrets.SERVER_SSH_KEY }}
       SERVER_SSH_PORT: ${{ secrets.SERVER_SSH_PORT }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: ${{ secrets.AWS_REGION }}
+      AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+      CLOUDFRONT_DISTRIBUTION_ID: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+
+  create-site-map:
+    needs: build-test-publish
+    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_upload_s3_cloudfront_invalidation.yml@v1.0
+    with:       
+      url: https://portfolio.fullstackindie.net
+      cache: false
+      dest_folder: Portfolio
+      invalidation_paths: /Portfolio/sitemap.xml
+    secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       AWS_REGION: ${{ secrets.AWS_REGION }}
