@@ -31,12 +31,12 @@ jobs:
 
   create-site-map:
     needs: build-test-publish
-    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_upload_s3_cloudfront_invalidation.yml@v1.0.4
-    with:       
+    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_upload_s3_cloudfront_invalidation.yml@v1.0.5
+    with:
       url: https://portfolio.fullstackindie.net
       cache: false
       dest_folder: Portfolio
-      invalidation_paths: /Portfolio/sitemap.xml
+      invalidation_paths: /Portfolio/SEO/*
     secrets:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
