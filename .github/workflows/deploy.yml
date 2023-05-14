@@ -31,7 +31,7 @@ jobs:
 
   create-site-map:
     needs: build-test-publish
-    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_for_static_site_&_upload_to_server.yml@v1.1.3
+    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_for_static_site_&_upload_to_server.yml@v1.1.4
     with:
       folder_path: /var/www/html/portfolio
       repo_name: Portfolio
