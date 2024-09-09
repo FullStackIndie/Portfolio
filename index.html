@@ -7,9 +7,11 @@
     <meta name="description" content="My Portfolio of different coding projects I have worked on or contributed to. 
     You can also find my contact information to reach out and see if I am the right man for the job" />
     <meta name="author" content="John Murphy" />
-    <meta name="keywords" content="Fullstack .Net Developer, FullStackIndie, FullStackIndie LLC">
+    <meta name="keywords"
+        content="Fullstack .Net Developer, Full Stack Web Developer, FullStackIndie, FullStackIndie LLC">
     <title>J. Murphy .Net Developer</title>
-
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="https://dsm56ob6rdulz.cloudfront.net/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
@@ -20,13 +22,13 @@
         rel="stylesheet" type="text/css" />
 
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="https://dsm56ob6rdulz.cloudfront.net/Portfolio/css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://dsm56ob6rdulz.cloudfront.net/Portfolio/css/styles.css" />
 
     <!-- Animate CSS -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <!-- Custom CSS -->
-    <link href="https://dsm56ob6rdulz.cloudfront.net/Portfolio/css/site.css" />
+    <link rel="stylesheet" href="https://dsm56ob6rdulz.cloudfront.net/Portfolio/css/site.css" />
 </head>
 
 <!--
@@ -44,17 +46,16 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Challenges</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <!--
-      TODO: add More info
-    -->
-    <!-- Masthead-->
+
+
+    <!-- Call to action-->
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100 align-items-center justify-content-center text-center">
@@ -93,28 +94,29 @@
                         kept coming back. I loved the feeling of solving problems and seeing my code do stuff
                         and work so I decided to pursue it fulltime and make a career out of it.
                     </p>
-                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#services">What I Can Do!</a>
+                    <a class="btn btn-light btn-xl js-scroll-trigger" href="#projects">What I Can Do!</a>
                 </div>
             </div>
         </div>
     </section>
-    <!--
-      TODO: Convert images to Project links
-    -->
-    <!-- Services-->
-    <section class="page-section" id="services">
+
+    <section class="page-section" id="projects">
         <div class="container">
             <h2 class="text-center mt-0 text-white">Projects</h2>
             <hr class="divider mb-4" />
             <div class="row justify-content-center">
-                <!-- <div class="card m-lg-3" style="width: 18rem;">
-                    <img loading="lazy" class="card-img-top" src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/forums.webp" alt="Card image cap">
+                <div class="card m-lg-3" style="width: 18rem;">
+                    <img loading="lazy" class="card-img-top"
+                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/Identity_server_main.webp"
+                        alt="Identity Server portfolio picture">
                     <div class="card-body">
-                        <h5 class="card-title">Forums</h5>
-                        <p class="card-text">Forums</p>
-                        <a href="#" target="_blank" class="btn btn-light">Check it out</a>
+                        <h5 class="card-title">Full Stack Identity</h5>
+                        <p class="card-text"> Identity Server (Duende v7) providing Authentication for User
+                            registrations, Logins, Passkeys, Sessions, TwoFactor Auth, and Profile management</p>
+                        <a href="https://identity.fullstackindie.net/Identity/Account/Login?ReturnUrl=%2F"
+                            target="_blank" class="btn btn-light">Check it out</a>
                     </div>
-                </div> -->
+                </div>
                 <!-- <div class="card m-lg-3" style="width: 18rem;">
                     <img loading="lazy" class="card-img-top" src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/CritterTracker.webp" alt="Card image cap">
                     <div class="card-body">
@@ -126,41 +128,25 @@
                 </div> -->
                 <div class="card m-lg-3" style="width: 18rem;">
                     <img loading="lazy" class="card-img-top"
-                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/blog.webp" alt="Card image cap">
+                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/blog.webp"
+                        alt="FullStackIndie Blog picture">
                     <div class="card-body">
                         <h5 class="card-title">FullStackIndie Blog</h5>
-                        <p class="card-text">Blog site where I share tutorials and my thoughts on
+                        <p class="card-text">Blog site where I share tutorials on .Net, Devops, the Cloud, Game Dev, and
+                            my thoughts on
                             interesting topics</p>
                         <a href="https://blog.fullstackindie.net/" target="_blank" class="btn btn-light">
                             Check it out
                         </a>
                     </div>
                 </div>
-                                <!-- <div class="card m-lg-3" style="width: 18rem;">
-                                                    <img loading="lazy" class="card-img-top"
-                                                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/fullstackidentity.webp" alt="Card image cap">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">FullStack Identity</h5>
-                                                        <p class="card-text">Identity provider for My apps</p>
-                                                        <a href="#" target="_blank" class="btn btn-light">Check it out</a>
-                                                    </div>
-                                                </div> -->
-                <!-- <div class="card m-lg-3" style="width: 18rem;">
-                    <img loading="lazy" class="card-img-top"
-                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/easycodeforvivox.webp" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">easycodeforvivox</h5>
-                        <p class="card-text">Vivox.</p>
-                        <a href="#" target="_blank" class="btn btn-light">Check it out</a>
-                    </div>
-                </div> -->
             </div>
         </div>
     </section>
 
 
     <!-- My Latets Blogs -->
-    <section class="page-section" id="services">
+    <section class="page-section" id="blog-posts" style="display: none;">
         <div class="container">
             <h2 class="text-center mt-0 text-white">My Latest Blog Posts</h2>
             <hr class="divider mb-4" />
@@ -170,67 +156,39 @@
     </section>
 
 
-<!-- Services-->
-<section class="page-section" id="services">
-    <div class="container">
-        <h2 class="text-center mt-0 text-white">Open Source Projects</h2>
-        <hr class="divider mb-4" />
-        <div class="row justify-content-center">
-            <!-- <div class="card m-lg-3" style="width: 18rem;">
-                        <img loading="lazy" class="card-img-top" src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/forums.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Forums</h5>
-                            <p class="card-text">Forums</p>
-                            <a href="#" target="_blank" class="btn btn-light">Check it out</a>
-                        </div>
-                    </div> -->
-            <!-- <div class="card m-lg-3" style="width: 18rem;">
-                        <img loading="lazy" class="card-img-top" src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/CritterTracker.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">Critter Tracker</h5>
-                            <p class="card-text">Multi-Tenant ticket system for bug tracking or project management.</p>
-                            <a href="https://crittertracker.fullstackindie.net/" target="_blank"
-                                class="btn btn-light">Check it out</a>
-                        </div>
-                    </div> -->
-            <!-- <div class="card m-lg-3" style="width: 18rem;">
-                                                        <img loading="lazy" class="card-img-top"
-                                                            src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/fullstackidentity.webp" alt="Card image cap">
-                                                        <div class="card-body">
-                                                            <h5 class="card-title">FullStack Identity</h5>
-                                                            <p class="card-text">Identity provider for My apps</p>
-                                                            <a href="#" target="_blank" class="btn btn-light">Check it out</a>
-                                                        </div>
-                                                    </div> -->
-            <div class="card m-lg-3" style="width: 18rem;">
-                        <img loading="lazy" class="card-img-top"
-                            src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/EasyCodeForVivoxCard.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">EasyCodeForVivox</h5>
-                            <p class="card-text">An API built to make working with Vivox Voice and Text Chat easier in Unity Game Engine for indie game devs and small teams</p>
-                            <a href="https://github.com/FullStackIndie/EasyCodeForVivox" target="_blank" class="btn btn-light">Check it out</a>
-                        </div>
+    <section class="page-section" id="open-source">
+        <div class="container">
+            <h2 class="text-center mt-0 text-white">Open Source Projects</h2>
+            <hr class="divider mb-4" />
+            <div class="row justify-content-center">
+                <div class="card m-lg-3" style="width: 18rem;">
+                    <img loading="lazy" class="card-img-top"
+                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/EasyCodeForVivoxCard.webp"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">EasyCodeForVivox</h5>
+                        <p class="card-text">An API built to make working with Vivox Voice and Text Chat easier in Unity
+                            Game Engine for indie game devs and small teams</p>
+                        <a href="https://github.com/FullStackIndie/EasyCodeForVivox" target="_blank"
+                            class="btn btn-light">Check it out</a>
                     </div>
-            <div class="card m-lg-3" style="width: 18rem;">
-                        <img loading="lazy" class="card-img-top"
-                            src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/programmer_dreaming_about_coding.webp" alt="Card image cap">
-                        <div class="card-body">
-                            <h5 class="card-title">XML SiteMap Generator</h5>
-                            <p class="card-text">A CLI Tool that can crawl your website and 
-                                generate an XML Sitemap so Search Engines can find your site and and increase your SEO ranking</p>
-                            <a href="https://github.com/FullStackIndie/sitemap-generator" target="_blank" class="btn btn-light">Check it out</a>
-                        </div>
+                </div>
+                <div class="card m-lg-3" style="width: 18rem;">
+                    <img loading="lazy" class="card-img-top"
+                        src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/programmer_dreaming_about_coding.webp"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">XML SiteMap Generator</h5>
+                        <p class="card-text">A CLI Tool that can crawl your website and
+                            generate an XML Sitemap so Search Engines can find your site and and increase your SEO
+                            ranking</p>
+                        <a href="https://github.com/FullStackIndie/sitemap-generator" target="_blank"
+                            class="btn btn-light">Check it out</a>
                     </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-
-
-
-
-    <!--
-      TODO: Check if its asection, if there is a button that comes to this section or if its a link
-    -->
+    </section>
 
     <h2 class="text-center mt-0 text-white">JavaScript Challenges</h2>
     <hr class="divider pb-4" />
@@ -239,7 +197,8 @@
         <div class="container-fluid p-0">
             <div class="row no-gutters">
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" onclick="showTacoCat()" data-href="https://portfolio.fullstackindie.net/challenges/taco-cat">
+                    <a class="portfolio-box" onclick="showTacoCat()"
+                        data-href="https://portfolio.fullstackindie.net/challenges/taco-cat">
                         <img loading="lazy" class="img-fluid"
                             src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/sereja-ris-TacoCat-unsplash.webp"
                             alt="" />
@@ -250,7 +209,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" onclick="showFizzBuzz()" data-href="https://portfolio.fullstackindie.net/challenges/fizz-buzz">
+                    <a class="portfolio-box" onclick="showFizzBuzz()"
+                        data-href="https://portfolio.fullstackindie.net/challenges/fizz-buzz">
                         <img loading="lazy" class="img-fluid"
                             src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/sam-cernik-FizzBuzz-unsplash.webp"
                             alt="" />
@@ -261,7 +221,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" onclick="showSumOfAllFears()" data-href="https://portfolio.fullstackindie.net/challenges/sum-of-all-fears">
+                    <a class="portfolio-box" onclick="showSumOfAllFears()"
+                        data-href="https://portfolio.fullstackindie.net/challenges/sum-of-all-fears">
                         <img loading="lazy" class="img-fluid"
                             src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/roman-synkevych-SumOfAllFears-unsplash.webp"
                             alt="" />
@@ -272,7 +233,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" onclick="showMortgageCalculator()" data-href="https://portfolio.fullstackindie.net/challenges/mortgage-calculator">
+                    <a class="portfolio-box" onclick="showMortgageCalculator()"
+                        data-href="https://portfolio.fullstackindie.net/challenges/mortgage-calculator">
                         <img loading="lazy" class="img-fluid"
                             src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/mortgageCalcmid.webp" alt="" />
                         <div class="portfolio-box-caption">
@@ -282,7 +244,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" onclick="showSuperDogEvents()" data-href="https://portfolio.fullstackindie.net/challenges/super-dog-events">
+                    <a class="portfolio-box" onclick="showSuperDogEvents()"
+                        data-href="https://portfolio.fullstackindie.net/challenges/super-dog-events">
                         <img loading="lazy" class="img-fluid"
                             src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/superdogevents.webp" alt="" />
                         <div class="portfolio-box-caption">
@@ -292,7 +255,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a class="portfolio-box" onclick="showTodoList()" data-href="https://portfolio.fullstackindie.net/challenges/todo-list">
+                    <a class="portfolio-box" onclick="showTodoList()"
+                        data-href="https://portfolio.fullstackindie.net/challenges/todo-list">
                         <img loading="lazy" class="img-fluid"
                             src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/todo-things.webp" alt="" />
                         <div class="portfolio-box-caption p-3">
@@ -311,7 +275,8 @@
     <!--
       TODO: Add project or resume
     -->
-    <!-- Call to action-->
+
+
     <section class="page-section bg-dark text-white">
         <div class="row">
             <div class="col-2">
@@ -342,16 +307,12 @@
     </section>
 
 
-
-    <!--
-      TODO: personliaze
-    -->
     <!-- Contact-->
     <section class="page-section bg-primary" id="contact">
         <div class="row justify-content-center align-center">
             <div class="col-lg-2 ml-auto text-center mb-5 mb-lg-0">
                 <i class="fab fa-linkedin fa-3x mb-3 text-muted"></i>
-                <div><a href="https://www.linkedin.com/in/john-murphy21/">LinkedIn Profile</a></div>
+                <div><a target="_blank" href="https://www.linkedin.com/in/john-murphy21/">LinkedIn Profile</a></div>
             </div>
             <div class="col-xl-6 col-lg-6 col-md-6 col-sm-7 col-xs-4 text-center">
                 <h2 class="mt-0">Let's Get In Touch!</h2>
@@ -366,6 +327,7 @@
                             back to you as soon as possible!</p>
                         <br />
                         <form id="form">
+                            <div class="g-recaptcha" data-sitekey="6LdQ0ToqAAAAALZzfzBCfzw1GP5oJLBsO5ohGsvO"></div>
                             <label class="pl-2" for="from_name">Your Name</label>
                             <input type="text" name="from_name" class="form-control mb-2" placeholder="Enter your Name">
                             <label class="pl-2" for="reply_to">Email</label>
@@ -381,9 +343,11 @@
                 </div>
             </div>
             <div class="col-lg-2 mr-auto text-center">
-                <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
+                <!-- <i class="fab fa-github fa-3x mb-3 text-muted"></i> -->
+                <img class="mb-3" src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/img/svg/peerlist-color.svg"
+                    width="40" height="40">
                 <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                <a class="d-block" href="mailto:johnmurphy_21@yahoo.com">johnmurphy_21@yahoo.com</a>
+                <a class="d-block" target="_blank" href="https://peerlist.io/johntmurphy9317">Peerlist Profile</a>
             </div>
         </div>
     </section>
@@ -393,7 +357,7 @@
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container">
-            <div class="small text-center text-muted">Copyright © 2023 - John Murphy All Rights Reserved.</div>
+            <div id="copyright" class="small text-center text-muted"></div>
         </div>
     </footer>
 
@@ -425,32 +389,43 @@
             </div>
         </div>
     </div>
-
     <!-- End Modal -->
 
     <!-- Bootstrap core JS-->
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!--
-      TODO: Commeneted Out plugin - May have to check if Site breaks later
-    -->
 
-    <!-- Email JS-->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <!-- Email JS-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
-        emailjs.init('kdO9v1cTfPC7hqFVx');
+        emailjs.init({ publicKey: 'kdO9v1cTfPC7hqFVx' });
     </script>
-    <script src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/js/email.js"></script>
-
-    <!-- Core theme JS-->
-    <script src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/js/scripts.js"></script>
-
-    <!-- Custom JS-->
-    <script src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/js/site.js"></script>
-
-    <!-- Blog API -->
-    <script src="https://dsm56ob6rdulz.cloudfront.net/Portfolio/js/blogAPI.js"></script>
+    <script>
+        const scriptUrlPaths = ["js/email.js", "js/scripts.js", "js/site.js", "js/blogAPI.js"];
+        function getScriptUrl()
+        {
+            let scheme = window.location.href.split('//', 1);
+            let domain = window.location.href.split('//')[1].split('/')[0];
+            scriptUrlPaths.forEach((scriptUrlPath) =>
+            {
+                let script = document.createElement('script');
+                script.src = `${scheme}//${domain}/${scriptUrlPath}`;
+                script.async = true;
+                script.onload = function ()
+                {
+                    console.log(`Script loaded successfully. ${scriptUrlPath}`);
+                };
+                script.onerror = function ()
+                {
+                    console.error(`Error loading script. ${scriptUrlPath}`);
+                };
+                document.head.appendChild(script);
+            });
+        }
+        getScriptUrl();
+    </script>
 </body>
 
 </html>
