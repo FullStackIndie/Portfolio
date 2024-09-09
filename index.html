@@ -408,14 +408,13 @@
         {
             let scheme = window.location.href.split('//', 1);
             let domain = window.location.href.split('//')[1].split('/')[0];
-            console.log(domain);
+            console.log(domain); 
+            if (domain == "portfolio.fullstackindie.net")
+            {
+                domain = "dsm56ob6rdulz.cloudfront.net/Portfolio";
+            }
             scriptUrlPaths.forEach((scriptUrlPath) =>
             {
-                if (domain == "portfolio.fullstackindie.net")
-                {
-                    domain = "dsm56ob6rdulz.cloudfront.net";
-                    scriptUrlPath = `Portfolio/${scriptUrlPath}`;
-                }
                 let script = document.createElement('script');
                 script.src = `${scheme}//${domain}/${scriptUrlPath}`;
                 script.async = true;
