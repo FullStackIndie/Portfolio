@@ -11,7 +11,7 @@ on:
 
 jobs:
   build-test-publish:
-    uses: FullStackIndie/Reusable-Workflows/.github/workflows/deploy_static_website_s3_&_cloudfront_invalidation.yml@main
+    uses: FullStackIndieLLC/Reusable-Workflows/.github/workflows/deploy_static_website_s3_&_cloudfront_invalidation.yml@v1.1.88
     with:
       folder_path: /var/www/html/portfolio
       repo_name: Portfolio
@@ -31,7 +31,7 @@ jobs:
 
   create-site-map:
     needs: build-test-publish
-    uses: FullStackIndie/Reusable-Workflows/.github/workflows/create_sitemap_for_static_site_&_upload_to_server.yml@v1.1.7
+    uses: FullStackIndieLLC/Reusable-Workflows/.github/workflows/create_sitemap_for_static_site_&_upload_to_server.yml@v1.1.88
     with:
       folder_path: /var/www/html/portfolio
       repo_name: Portfolio
