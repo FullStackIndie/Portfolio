@@ -11,7 +11,7 @@ $(function () {
         day: "numeric",
       };
       if (data !== null || data !== undefined) {
-        document.getElementById("blog-posts").style.display = block;
+        document.getElementById("blog-posts").style.display = "block";
       }
       console.log(data[0]);
       let blogLink = `${blogUrl}${data[0].slug}`;
