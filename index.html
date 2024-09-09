@@ -408,6 +408,10 @@
         {
             let scheme = window.location.href.split('//', 1);
             let domain = window.location.href.split('//')[1].split('/')[0];
+            console.log(domain);
+            if(domain == "portfolio.fullstackindie.net"){
+                domain = "https://dsm56ob6rdulz.cloudfront.net/Portfolio"
+            }
             scriptUrlPaths.forEach((scriptUrlPath) =>
             {
                 let script = document.createElement('script');
