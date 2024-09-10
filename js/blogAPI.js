@@ -10,9 +10,11 @@ $(function () {
         month: "long",
         day: "numeric",
       };
-      if (data !== null || data !== undefined) {
-        document.getElementById("blog-posts").style.display = "block";
+      if (data == null || data == undefined) {
+        console.log("No blog posts availible");
+        return;
       }
+      document.getElementById("blog-posts").style.display = "block";
       console.log(data[0]);
       let blogLink = `${blogUrl}${data[0].slug}`;
       var blogPosts = document.getElementById("blog-posts");
